@@ -131,7 +131,8 @@ How it hooks into Tensura:
 
 ## Building
 
-Requires JDK 21. IntelliJ IDEA can import the project directly: it reads the Gradle version from
+Requires **JDK 25 or newer** to build (Fabric Loom 1.18 needs it to run Gradle); the mod itself is compiled for and runs on
+Java 21. IntelliJ IDEA can import the project directly: it reads the Gradle version from
 `gradle/wrapper/gradle-wrapper.properties` and creates the Fabric Loom run configurations. Without an IDE use Gradle 9.8:
 
 ```
