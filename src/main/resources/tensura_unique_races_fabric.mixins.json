@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.aeterts.tensuraunique.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ReincarnationMenuMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

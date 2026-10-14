@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "tensura_unique_races_fabric",
+  "version": "${version}",
+  "name": "Tensura: Unique Races (Fabric)",
+  "description": "Add-on for Tensura: Reincarnated. Each race can be taken by a limited number of players on a server (by default one). Server-side, works in multiplayer.",
+  "authors": [
+    "Aeterts"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/tensura_unique_races_fabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.aeterts.tensuraunique.TensuraUniqueRaces"
+    ]
+  },
+  "mixins": [
+    "tensura_unique_races_fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*",
+    "architectury": ">=13.0.8",
+    "tensura": ">=2.0.1.3",
+    "manascore_race": ">=4.0.0.2"
+  }
+}

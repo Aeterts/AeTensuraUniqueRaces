@@ -1,0 +1,106 @@
+plugins {
+    id 'fabric-loom' version '1.18.4'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    // Tensura: Reincarnated and the mods it needs are published on Modrinth's maven (all rights reserved: they are only
+    // used to compile and to test, and are never bundled into this mod).
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
+}
+
+// ManasCore keeps its modules (race, network, ...) as jar-in-jar inside its main jar and does not publish them
+// anywhere else. Gradle does not look inside, so they are unpacked from the downloaded jar into build/ to compile against.
+def manascoreJar = configurations.detachedConfiguration(
+        dependencies.create("maven.modrinth:manascore:${project.manascore_version}")).singleFile
+def manascoreModules = layout.buildDirectory.dir('manascore/modules').get().asFile
+def manascoreLibs = layout.buildDirectory.dir('manascore/libs').get().asFile
+
+def unpackNested(File jar, File into, Closure accept) {
+    into.mkdirs()
+    new java.util.zip.ZipFile(jar).withCloseable { zip ->
+        zip.entries().each { entry ->
+            def fileName = entry.name.tokenize('/').last()
+            if (entry.name.startsWith('META-INF/jars/') && entry.name.endsWith('.jar') && accept(fileName)) {
+                new File(into, fileName).bytes = zip.getInputStream(entry).bytes
+            }
+        }
+    }
+}
+
+unpackNested(manascoreJar, manascoreModules) { it.startsWith('manascore-') }
+// its config module nests NightConfig, which is needed to start the game in a dev environment
+unpackNested(manascoreModules.listFiles().find { it.name.startsWith('manascore-config-') }, manascoreLibs) { it.startsWith('core-') || it.startsWith('toml-') }
+
+loom {
+    mods {
+        "tensura_unique_races_fabric" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    // Yarn can not be used: Tensura does not remap onto it (a method name clashes), the official mappings do
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Modrinth version ids
+    modImplementation "maven.modrinth:tensura-reincarnated:${project.tensura_version}"
+    modImplementation "maven.modrinth:manascore:${project.manascore_version}"
+    modImplementation fileTree(dir: manascoreModules, include: '*.jar')
+    runtimeOnly fileTree(dir: manascoreLibs, include: '*.jar')
+    modImplementation "maven.modrinth:architectury-api:${project.architectury_version}"
+    modImplementation "maven.modrinth:geckolib:${project.geckolib_version}"
+    modImplementation "maven.modrinth:smartbrainlib:${project.smartbrainlib_version}"
+    modImplementation "maven.modrinth:terrablender:${project.terrablender_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", project.minecraft_version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+                "minecraft_version": project.minecraft_version
+    }
+}
+
+def targetJavaVersion = 21
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = targetJavaVersion
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+    withSourcesJar()
+}
+
+jar {
+    exclude "org/aeterts/tensuraunique/DevTest*" // development scenario, not shipped
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}" }
+    }
+}
