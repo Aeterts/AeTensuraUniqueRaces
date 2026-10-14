@@ -9,8 +9,8 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/project/tensura-unique-races",
-    "sources": "https://github.com/Aeterts/TensuraUniqueRaces-Fabric",
-    "issues": "https://github.com/Aeterts/TensuraUniqueRaces-Fabric/issues"
+    "sources": "https://github.com/Aeterts/AeTensuraUniqueRaces-Fabric",
+    "issues": "https://github.com/Aeterts/AeTensuraUniqueRaces-Fabric/issues"
   },
   "license": "MIT",
   "icon": "assets/tensura_unique_races_fabric/icon.png",
