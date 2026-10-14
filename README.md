@@ -43,7 +43,7 @@ survive restarts, offline players keep their race, and clients do not need the m
 
 ## Installation
 
-1. Put `tensura-unique-races-fabric-<version>.jar` into the `mods` folder of the **server**.
+1. Put `ae-tensura-unique-races-fabric-<version>.jar` into the `mods` folder of the **server**.
 2. Start the server once. `config/tensura_unique_races.json` is created with every setting and its default.
 3. That is all: clients do not install anything.
 
@@ -140,7 +140,7 @@ Java 21. IntelliJ IDEA can import the project directly: it reads the Gradle vers
 `gradle/wrapper/gradle-wrapper.properties` and creates the Fabric Loom run configurations. Without an IDE use Gradle 9.8:
 
 ```
-gradle build      # the jar is build/libs/tensura-unique-races-fabric-<version>.jar
+gradle build      # the jar is build/libs/ae-tensura-unique-races-fabric-<version>.jar
 ```
 
 Notes:

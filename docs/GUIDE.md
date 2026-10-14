@@ -27,7 +27,7 @@ Contents
 | Fabric API | any build for 1.21.1 |
 | Tensura: Reincarnated | 2.0.1.3 or newer (it needs ManasCore, Architectury, GeckoLib, SmartBrainLib and TerraBlender) |
 
-**Installing.** Put `tensura-unique-races-fabric-<version>.jar` into the `mods` folder of the **server**. Clients do not
+**Installing.** Put `ae-tensura-unique-races-fabric-<version>.jar` into the `mods` folder of the **server**. Clients do not
 need the mod: it has no client code and no network packets of its own, and every message to a player is an ordinary
 chat message. In single player the mod should work the same way (the integrated server does the same job), but that mode
 has not been tested separately.
