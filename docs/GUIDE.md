@@ -1,4 +1,4 @@
-# Tensura: Unique Races (Fabric) — guide
+# Ae's Tensura: Unique Races — guide
 
 An add-on for [Tensura: Reincarnated](https://modrinth.com/mod/tensura-reincarnated) on Fabric 1.21.1. It limits how many
 players on a server can have the same race at the same time. By default a race can be taken by one player only.

@@ -82,6 +82,6 @@ public final class TensuraUniqueRaces implements ModInitializer {
         });
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> UniqueCommand.register(dispatcher));
 
-        LOGGER.info("Tensura: Unique Races (Fabric) loaded");
+        LOGGER.info("Ae's Tensura: Unique Races loaded");
     }
 }

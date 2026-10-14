@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "tensura_unique_races_fabric",
   "version": "${version}",
-  "name": "Tensura: Unique Races (Fabric)",
+  "name": "Ae's Tensura: Unique Races",
   "description": "Add-on for Tensura: Reincarnated. Each race can be taken by a limited number of players on a server (by default one). Server-side, works in multiplayer.",
   "authors": [
     "Aeterts"

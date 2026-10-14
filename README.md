@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="art/icon_512.png" alt="Tensura: Unique Races (Fabric)" width="160">
+  <img src="art/icon_512.png" alt="Ae's Tensura: Unique Races" width="160">
 </p>
 
-# Tensura: Unique Races (Fabric)
+# Ae's Tensura: Unique Races
 
-An add-on for [Tensura: Reincarnated](https://modrinth.com/mod/tensura-reincarnated) (Fabric, Minecraft 1.21.1) that
+An add-on for [Tensura: Reincarnated](https://modrinth.com/mod/tensura-reincarnated) that
 limits how many players on a server can have the same race at once. By default a race belongs to **one player only**:
 once somebody has taken it, everybody else has to pick something else.
 
