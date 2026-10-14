@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cHet ras &e{race}&c is al bezet door &f{holders}&c. Kies een ander ras.",
+  "message.full": "&cHet ras &e{race}&c is vol (&f{holders}&c). Kies een ander ras.",
+  "message.someone": "een andere speler",
+  "message.noFreeRace": "&cAlle rassen in deze lijst zijn al bezet.",
+  "message.noneTaken": "&7Er is nog geen ras bezet.",
+  "message.showHeader": "&6Bezette rassen ({count}):",
+  "command.releasedRace": "{count} claim(s) van {race} vrijgegeven.",
+  "command.nobodyHolds": "Niemand heeft het ras {race}.",
+  "command.releasedPlayer": "Claim van {name} vrijgegeven.",
+  "command.noClaim": "{name} heeft geen claim.",
+  "command.reloaded": "Unique Races-configuratie opnieuw geladen."
+}

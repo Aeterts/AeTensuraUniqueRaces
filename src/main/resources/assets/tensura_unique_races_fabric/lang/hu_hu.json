@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cA(z) &e{race}&c faj már foglalt: &f{holders}&c. Válassz másikat.",
+  "message.full": "&cA(z) &e{race}&c faj betelt (&f{holders}&c). Válassz másikat.",
+  "message.someone": "másik játékos",
+  "message.noFreeRace": "&cEnnek a listának minden faja már foglalt.",
+  "message.noneTaken": "&7Még egyetlen faj sem foglalt.",
+  "message.showHeader": "&6Foglalt fajok ({count}):",
+  "command.releasedRace": "A(z) {race} faj {count} foglalása felszabadítva.",
+  "command.nobodyHolds": "A(z) {race} fajt senki sem birtokolja.",
+  "command.releasedPlayer": "{name} foglalása felszabadítva.",
+  "command.noClaim": "{name} játékosnak nincs foglalása.",
+  "command.reloaded": "A Unique Races beállításai újratöltve."
+}

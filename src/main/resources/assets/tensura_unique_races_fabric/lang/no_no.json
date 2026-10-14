@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasen &e{race}&c er allerede tatt av &f{holders}&c. Velg en annen.",
+  "message.full": "&cRasen &e{race}&c er full (&f{holders}&c). Velg en annen.",
+  "message.someone": "en annen spiller",
+  "message.noFreeRace": "&cAlle rasene i denne listen er allerede tatt.",
+  "message.noneTaken": "&7Ingen rase er tatt ennå.",
+  "message.showHeader": "&6Tatte raser ({count}):",
+  "command.releasedRace": "{count} reservasjon(er) for {race} frigjort.",
+  "command.nobodyHolds": "Ingen har rasen {race}.",
+  "command.releasedPlayer": "Reservasjonen til {name} ble frigjort.",
+  "command.noClaim": "{name} har ingen reservasjon.",
+  "command.reloaded": "Unique Races-konfigurasjonen ble lastet inn på nytt."
+}

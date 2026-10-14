@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cChủng tộc &e{race}&c đã bị &f{holders}&c chiếm. Hãy chọn chủng tộc khác.",
+  "message.full": "&cChủng tộc &e{race}&c đã đầy (&f{holders}&c). Hãy chọn chủng tộc khác.",
+  "message.someone": "người chơi khác",
+  "message.noFreeRace": "&cTất cả chủng tộc trong danh sách này đã có người chọn.",
+  "message.noneTaken": "&7Chưa có chủng tộc nào bị chiếm.",
+  "message.showHeader": "&6Chủng tộc đã bị chiếm ({count}):",
+  "command.releasedRace": "Đã giải phóng {count} lượt chiếm của chủng tộc {race}.",
+  "command.nobodyHolds": "Không ai giữ chủng tộc {race}.",
+  "command.releasedPlayer": "Đã giải phóng lượt chiếm của {name}.",
+  "command.noClaim": "{name} không chiếm chủng tộc nào.",
+  "command.reloaded": "Đã tải lại cấu hình Unique Races."
+}

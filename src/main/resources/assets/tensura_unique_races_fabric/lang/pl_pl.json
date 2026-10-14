@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasa &e{race}&c jest już zajęta: &f{holders}&c. Wybierz inną.",
+  "message.full": "&cRasa &e{race}&c jest pełna (&f{holders}&c). Wybierz inną.",
+  "message.someone": "inny gracz",
+  "message.noFreeRace": "&cWszystkie rasy z tej listy są już zajęte.",
+  "message.noneTaken": "&7Żadna rasa nie jest jeszcze zajęta.",
+  "message.showHeader": "&6Zajęte rasy ({count}):",
+  "command.releasedRace": "Zwolniono rezerwacje rasy {race}: {count}.",
+  "command.nobodyHolds": "Nikt nie ma rasy {race}.",
+  "command.releasedPlayer": "Zwolniono rezerwację gracza {name}.",
+  "command.noClaim": "Gracz {name} nie ma rezerwacji.",
+  "command.reloaded": "Przeładowano konfigurację Unique Races."
+}

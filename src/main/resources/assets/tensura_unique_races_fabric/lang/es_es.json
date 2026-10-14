@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cLa raza &e{race}&c ya está ocupada por &f{holders}&c. Elige otra.",
+  "message.full": "&cLa raza &e{race}&c está completa (&f{holders}&c). Elige otra.",
+  "message.someone": "otro jugador",
+  "message.noFreeRace": "&cTodas las razas de esta lista ya están ocupadas.",
+  "message.noneTaken": "&7Aún no hay ninguna raza ocupada.",
+  "message.showHeader": "&6Razas ocupadas ({count}):",
+  "command.releasedRace": "Liberadas {count} reserva(s) de {race}.",
+  "command.nobodyHolds": "Nadie tiene la raza {race}.",
+  "command.releasedPlayer": "Reserva de {name} liberada.",
+  "command.noClaim": "{name} no tiene ninguna reserva.",
+  "command.reloaded": "Configuración de Unique Races recargada."
+}

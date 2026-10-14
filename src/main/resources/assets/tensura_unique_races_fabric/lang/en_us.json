@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cThe race &e{race}&c is already taken by &f{holders}&c. Choose another one.",
+  "message.full": "&cThe race &e{race}&c is full (&f{holders}&c). Choose another one.",
+  "message.someone": "another player",
+  "message.noFreeRace": "&cEvery race of this pool is already taken.",
+  "message.noneTaken": "&7No race is taken yet.",
+  "message.showHeader": "&6Taken races ({count}):",
+  "command.releasedRace": "Released {count} claim(s) of {race}.",
+  "command.nobodyHolds": "Nobody holds {race}.",
+  "command.releasedPlayer": "Released the claim of {name}.",
+  "command.noClaim": "{name} holds no claim.",
+  "command.reloaded": "Unique Races config reloaded."
+}

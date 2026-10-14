@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cDie Rasse &e{race}&c ist bereits vergeben an &f{holders}&c. Wähle eine andere.",
+  "message.full": "&cDie Rasse &e{race}&c ist voll besetzt (&f{holders}&c). Wähle eine andere.",
+  "message.someone": "einen anderen Spieler",
+  "message.noFreeRace": "&cAlle Rassen dieser Auswahl sind bereits vergeben.",
+  "message.noneTaken": "&7Noch keine Rasse ist vergeben.",
+  "message.showHeader": "&6Vergebene Rassen ({count}):",
+  "command.releasedRace": "{count} Belegung(en) der Rasse {race} aufgehoben.",
+  "command.nobodyHolds": "Die Rasse {race} hat niemand.",
+  "command.releasedPlayer": "Belegung von {name} aufgehoben.",
+  "command.noClaim": "{name} hat keine Belegung.",
+  "command.reloaded": "Unique-Races-Konfiguration neu geladen."
+}

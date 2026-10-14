@@ -28,9 +28,7 @@ public final class Claims {
     private static final long DAY_MS = 24L * 60 * 60 * 1000;
     private static final int EXPIRE_CHECK_TICKS = 20 * 60 * 30;
 
-    /** Players whose race changed this tick -> was it an evolution. */
     private static final Map<UUID, Boolean> PENDING = new HashMap<>();
-    /** Players whose reincarnation menu is to be opened again, with the ticks left to wait. */
     private static final Map<UUID, Reopen> REOPEN = new LinkedHashMap<>();
     private static int expireCounter;
     /** Finds an online player by id; replaced by the development test, which uses players that are not in the player list. */
@@ -46,9 +44,6 @@ public final class Claims {
         return TensuraUniqueRaces.config();
     }
 
-    // ---------- queries ----------
-
-    /** The race a player really has right now, according to Tensura/ManasCore. */
     public static ResourceLocation actualRace(ServerPlayer player) {
         Optional<ManasRaceInstance> race = RaceAPI.getRaceFrom(player).getRace();
         return race.map(ManasRaceInstance::getRaceId).orElse(null);
@@ -122,11 +117,12 @@ public final class Claims {
             TensuraUniqueRaces.LOGGER.info("{} was refused {} (held by {})", player.getGameProfile().getName(), next,
                     holders.stream().map(h -> h.name).toList());
         }
-        return takenMessage(next, holders, limit);
+        return takenMessage(player, next, holders, limit);
     }
 
-    private static Component takenMessage(ResourceLocation race, List<ClaimState.Claim> holders, int limit) {
+    private static Component takenMessage(ServerPlayer player, ResourceLocation race, List<ClaimState.Claim> holders, int limit) {
         UniqueConfig cfg = cfg();
+        String lang = Lang.of(player);
         String holderText;
         if (cfg.showHolderNames) {
             StringBuilder names = new StringBuilder();
@@ -138,13 +134,13 @@ public final class Claims {
             }
             holderText = names.toString();
         } else {
-            holderText = cfg.messages.someone;
+            holderText = cfg.message("someone", lang);
         }
         Map<String, Component> values = Map.of(
                 "race", raceName(race),
                 "holders", Component.literal(holderText),
                 "limit", Component.literal(limit == Integer.MAX_VALUE ? "-" : String.valueOf(limit)));
-        return UniqueConfig.format(limit == 1 ? cfg.messages.taken : cfg.messages.full, values);
+        return UniqueConfig.format(cfg.message(limit == 1 ? "taken" : "full", lang), values);
     }
 
     public static Component raceName(ResourceLocation id) {
@@ -153,9 +149,6 @@ public final class Claims {
         return name != null ? name : Component.literal(id.toString());
     }
 
-    // ---------- bookkeeping ----------
-
-    /** Make the claim of {@code player} agree with {@code actual}. Safe to call any number of times. */
     public static void sync(ServerPlayer player, ResourceLocation actual) {
         sync(player, actual, false);
     }
@@ -296,7 +289,6 @@ public final class Claims {
         }
     }
 
-    /** Releases the claims of players who have been away longer than {@code inactiveReleaseDays}. */
     public static void expireInactive(MinecraftServer server) {
         int days = cfg().inactiveReleaseDays;
         if (days <= 0 || !cfg().enabled) {
@@ -319,9 +311,6 @@ public final class Claims {
         }
     }
 
-    // ---------- admin ----------
-
-    /** @return how many claims were removed */
     public static int releaseRace(MinecraftServer server, ResourceLocation race) {
         ClaimState state = ClaimState.get(server);
         int before = state.claims.size();

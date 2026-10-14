@@ -72,6 +72,7 @@ registry, including races from other add-ons.
   "showPermissionLevel": 0,
   "adminPermissionLevel": 2,
   "showHolderNames": true,
+  "language": "auto",
   "messages": {
     "taken": "&cThe race &e{race}&c is already taken by &f{holders}&c. Choose another one.",
     "full": "&cThe race &e{race}&c is full (&f{holders}&c). Choose another one.",
@@ -147,9 +148,12 @@ is, the race the player started with.
 Permission levels in Minecraft: 0 — everybody, 1 — moderators, 2 — operators (commands), 3 — administrators, 4 — owner.
 The level an operator gets is set in `server.properties` (`op-permission-level`, 4 by default).
 
-### Messages
+### Language and messages
 
-See [section 5](#5-messages-and-colours).
+| Setting | Type | Default | Description |
+|---|---|---|---|
+| `language` | text | `auto` | Language of the built-in texts. `auto` uses the language of each player's game (English when it is not available, for example in the console), or write a fixed one such as `en_us`, `ru_ru` or `de_de` (`en`, `ru`, `de` work too; the full list is in section 5). A language without a file falls back to English. |
+| `messages.*` | text | see the default file | The message templates, see [section 5](#5-messages-and-colours). |
 
 ---
 
@@ -219,7 +223,10 @@ underline) are not supported.
 | `&6` | gold | `&e` | yellow |
 | `&7` | gray | `&f` | white |
 
-The messages are sent as plain text by the server, so write them in the language your players use.
+**Languages.** The built-in texts exist in 33 languages and are chosen per player (see `language`): `en_us, ru_ru, uk_ua, de_de, fr_fr, es_es, pt_br, it_it, pl_pl, tr_tr, zh_cn, zh_tw, ja_jp, ko_kr, nl_nl, cs_cz, sk_sk, sv_se, da_dk, fi_fi, no_no, hu_hu, ro_ro, el_gr, bg_bg, hr_hr, lt_lt, lv_lv, et_ee, th_th, vi_vn, id_id, ca_es`. A regional variant uses the file of its language (`de_at` gets `de_de`, `es_mx` gets `es_es`, `pt_pt` gets `pt_br`, `zh_hk` gets `zh_tw`). A message you
+leave at its default (or empty) is replaced by the built-in text of the player's language, so a config written by an older
+version that still contains the English defaults is localized as well. A message you change is used exactly as written, for
+every player and every language: the mod is server-side only, so it cannot translate your text on the client.
 
 ---
 
@@ -330,6 +337,11 @@ automatically.
 { "logDenials": true }
 ```
 Then look at the server log: `PlayerName was refused tensura:elf (held by [Steve])`.
+
+**17. One language for everybody**
+```json
+{ "language": "ru_ru" }
+```
 
 ---
 

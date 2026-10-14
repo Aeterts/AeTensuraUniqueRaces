@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cРасата &e{race}&c вече е заета: &f{holders}&c. Изберете друга.",
+  "message.full": "&cРасата &e{race}&c е пълна (&f{holders}&c). Изберете друга.",
+  "message.someone": "друг играч",
+  "message.noFreeRace": "&cВсички раси от този списък вече са заети.",
+  "message.noneTaken": "&7Все още няма заета раса.",
+  "message.showHeader": "&6Заети раси ({count}):",
+  "command.releasedRace": "Освободени резервации на расата {race}: {count}.",
+  "command.nobodyHolds": "Никой не държи расата {race}.",
+  "command.releasedPlayer": "Резервацията на {name} беше освободена.",
+  "command.noClaim": "{name} няма резервация.",
+  "command.reloaded": "Конфигурацията на Unique Races беше презаредена."
+}

@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRase &e{race}&c jau ir aizņemta: &f{holders}&c. Izvēlieties citu.",
+  "message.full": "&cRase &e{race}&c ir pilna (&f{holders}&c). Izvēlieties citu.",
+  "message.someone": "cits spēlētājs",
+  "message.noFreeRace": "&cVisas šī saraksta rases jau ir aizņemtas.",
+  "message.noneTaken": "&7Pagaidām neviena rase nav aizņemta.",
+  "message.showHeader": "&6Aizņemtās rases ({count}):",
+  "command.releasedRace": "Atbrīvoti rases {race} rezervējumi: {count}.",
+  "command.nobodyHolds": "Rasi {race} neviens neaizņem.",
+  "command.releasedPlayer": "Spēlētāja {name} rezervējums atbrīvots.",
+  "command.noClaim": "Spēlētājam {name} nav rezervējuma.",
+  "command.reloaded": "Unique Races konfigurācija pārlādēta."
+}

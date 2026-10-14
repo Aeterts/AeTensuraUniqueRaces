@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cРаса &e{race}&c вже зайнята: &f{holders}&c. Оберіть іншу.",
+  "message.full": "&cРаса &e{race}&c заповнена (&f{holders}&c). Оберіть іншу.",
+  "message.someone": "інший гравець",
+  "message.noFreeRace": "&cУсі раси з цього списку вже зайняті.",
+  "message.noneTaken": "&7Поки що жодна раса не зайнята.",
+  "message.showHeader": "&6Зайняті раси ({count}):",
+  "command.releasedRace": "Звільнено записів раси {race}: {count}.",
+  "command.nobodyHolds": "Расу {race} ніхто не займає.",
+  "command.releasedPlayer": "Запис гравця {name} знято.",
+  "command.noClaim": "У гравця {name} немає запису.",
+  "command.reloaded": "Конфігурацію Unique Races перезавантажено."
+}

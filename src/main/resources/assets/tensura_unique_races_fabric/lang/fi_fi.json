@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRotu &e{race}&c on jo varattu: &f{holders}&c. Valitse toinen.",
+  "message.full": "&cRotu &e{race}&c on täynnä (&f{holders}&c). Valitse toinen.",
+  "message.someone": "toinen pelaaja",
+  "message.noFreeRace": "&cKaikki tämän listan rodut on jo varattu.",
+  "message.noneTaken": "&7Yhtään rotua ei ole vielä varattu.",
+  "message.showHeader": "&6Varatut rodut ({count}):",
+  "command.releasedRace": "Vapautettu rodun {race} varauksia: {count}.",
+  "command.nobodyHolds": "Kukaan ei ole varannut rotua {race}.",
+  "command.releasedPlayer": "Pelaajan {name} varaus vapautettiin.",
+  "command.noClaim": "Pelaajalla {name} ei ole varausta.",
+  "command.reloaded": "Unique Races -asetukset ladattiin uudelleen."
+}

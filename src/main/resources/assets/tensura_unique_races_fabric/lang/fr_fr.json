@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cLa race &e{race}&c est déjà prise par &f{holders}&c. Choisissez-en une autre.",
+  "message.full": "&cLa race &e{race}&c est complète (&f{holders}&c). Choisissez-en une autre.",
+  "message.someone": "un autre joueur",
+  "message.noFreeRace": "&cToutes les races de cette liste sont déjà prises.",
+  "message.noneTaken": "&7Aucune race n'est encore prise.",
+  "message.showHeader": "&6Races prises ({count}) :",
+  "command.releasedRace": "{count} réservation(s) de {race} libérée(s).",
+  "command.nobodyHolds": "Personne n'a la race {race}.",
+  "command.releasedPlayer": "Réservation de {name} libérée.",
+  "command.noClaim": "{name} n'a aucune réservation.",
+  "command.reloaded": "Configuration de Unique Races rechargée."
+}

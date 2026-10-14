@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasa &e{race}&c je již obsazena: &f{holders}&c. Vyberte jinou.",
+  "message.full": "&cRasa &e{race}&c je plná (&f{holders}&c). Vyberte jinou.",
+  "message.someone": "jiný hráč",
+  "message.noFreeRace": "&cVšechny rasy v tomto seznamu jsou již obsazeny.",
+  "message.noneTaken": "&7Zatím není obsazena žádná rasa.",
+  "message.showHeader": "&6Obsazené rasy ({count}):",
+  "command.releasedRace": "Uvolněno rezervací rasy {race}: {count}.",
+  "command.nobodyHolds": "Rasu {race} nikdo nemá.",
+  "command.releasedPlayer": "Rezervace hráče {name} byla uvolněna.",
+  "command.noClaim": "Hráč {name} nemá žádnou rezervaci.",
+  "command.reloaded": "Konfigurace Unique Races byla znovu načtena."
+}

@@ -37,7 +37,6 @@ public final class TensuraUniqueRaces implements ModInitializer {
     public void onInitialize() {
         reloadConfig();
 
-        // Single choke point: selection, reincarnation, evolution, commands and reset items all end up in Races#setRace.
         RaceEvents.SET_RACE.register((previous, entity, next, evolution, teleport, message) -> {
             if (!config.enabled || !(entity instanceof ServerPlayer player) || player.getServer() == null) {
                 return EventResult.pass();

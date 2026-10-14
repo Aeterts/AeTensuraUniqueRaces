@@ -1,0 +1,43 @@
+{
+  "languages": [
+    "en_us",
+    "ru_ru",
+    "uk_ua",
+    "de_de",
+    "fr_fr",
+    "es_es",
+    "pt_br",
+    "it_it",
+    "pl_pl",
+    "tr_tr",
+    "zh_cn",
+    "zh_tw",
+    "ja_jp",
+    "ko_kr",
+    "nl_nl",
+    "cs_cz",
+    "sk_sk",
+    "sv_se",
+    "da_dk",
+    "fi_fi",
+    "no_no",
+    "hu_hu",
+    "ro_ro",
+    "el_gr",
+    "bg_bg",
+    "hr_hr",
+    "lt_lt",
+    "lv_lv",
+    "et_ee",
+    "th_th",
+    "vi_vn",
+    "id_id",
+    "ca_es"
+  ],
+  "aliases": {
+    "zh_hk": "zh_tw",
+    "zh_mo": "zh_tw",
+    "nb_no": "no_no",
+    "nn_no": "no_no"
+  }
+}

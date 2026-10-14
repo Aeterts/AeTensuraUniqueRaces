@@ -12,7 +12,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
 
-/** Who holds which race. Lives in the overworld's data folder, so it survives restarts and covers offline players. */
 public final class ClaimState extends SavedData {
     private static final String ID = "tensura_unique_races";
 
@@ -25,7 +24,6 @@ public final class ClaimState extends SavedData {
         public ResourceLocation root;
         public ResourceLocation current;
         public String name;
-        /** Last time the holder was seen online (epoch millis); used to release claims of inactive players. */
         public long lastSeen;
 
         public Claim(ResourceLocation root, ResourceLocation current, String name) {

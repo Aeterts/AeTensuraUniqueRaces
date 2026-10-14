@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRas &e{race}&c sudah diambil oleh &f{holders}&c. Pilih ras lain.",
+  "message.full": "&cRas &e{race}&c sudah penuh (&f{holders}&c). Pilih ras lain.",
+  "message.someone": "pemain lain",
+  "message.noFreeRace": "&cSemua ras dalam daftar ini sudah diambil.",
+  "message.noneTaken": "&7Belum ada ras yang diambil.",
+  "message.showHeader": "&6Ras yang diambil ({count}):",
+  "command.releasedRace": "{count} klaim ras {race} dilepaskan.",
+  "command.nobodyHolds": "Tidak ada yang memegang ras {race}.",
+  "command.releasedPlayer": "Klaim {name} dilepaskan.",
+  "command.noClaim": "{name} tidak memiliki klaim.",
+  "command.reloaded": "Konfigurasi Unique Races dimuat ulang."
+}

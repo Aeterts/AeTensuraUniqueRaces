@@ -1,0 +1,13 @@
+{
+  "message.taken": "&c種族&e{race}&cはすでに&f{holders}&cが使用中です。別の種族を選んでください。",
+  "message.full": "&c種族&e{race}&cは定員に達しています（&f{holders}&c）。別の種族を選んでください。",
+  "message.someone": "他のプレイヤー",
+  "message.noFreeRace": "&cこのリストのすべての種族はすでに使用されています。",
+  "message.noneTaken": "&7使用中の種族はまだありません。",
+  "message.showHeader": "&6使用中の種族（{count}）：",
+  "command.releasedRace": "種族 {race} の登録を {count} 件解除しました。",
+  "command.nobodyHolds": "種族 {race} を持つプレイヤーはいません。",
+  "command.releasedPlayer": "{name} の登録を解除しました。",
+  "command.noClaim": "{name} には登録がありません。",
+  "command.reloaded": "Unique Races の設定を再読み込みしました。"
+}

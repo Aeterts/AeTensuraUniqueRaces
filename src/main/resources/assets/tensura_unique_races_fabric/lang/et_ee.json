@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRass &e{race}&c on juba hõivatud: &f{holders}&c. Vali mõni teine.",
+  "message.full": "&cRass &e{race}&c on täis (&f{holders}&c). Vali mõni teine.",
+  "message.someone": "teine mängija",
+  "message.noFreeRace": "&cKõik selle loendi rassid on juba hõivatud.",
+  "message.noneTaken": "&7Ühtegi rassi pole veel hõivatud.",
+  "message.showHeader": "&6Hõivatud rassid ({count}):",
+  "command.releasedRace": "Vabastati rassi {race} broneeringuid: {count}.",
+  "command.nobodyHolds": "Rassi {race} ei oma keegi.",
+  "command.releasedPlayer": "Mängija {name} broneering vabastati.",
+  "command.noClaim": "Mängijal {name} pole broneeringut.",
+  "command.reloaded": "Unique Races'i seaded laaditi uuesti."
+}

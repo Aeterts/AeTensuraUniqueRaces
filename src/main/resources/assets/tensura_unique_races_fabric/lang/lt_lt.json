@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasė &e{race}&c jau užimta: &f{holders}&c. Pasirinkite kitą.",
+  "message.full": "&cRasė &e{race}&c užpildyta (&f{holders}&c). Pasirinkite kitą.",
+  "message.someone": "kitas žaidėjas",
+  "message.noFreeRace": "&cVisos šio sąrašo rasės jau užimtos.",
+  "message.noneTaken": "&7Kol kas neužimta nė viena rasė.",
+  "message.showHeader": "&6Užimtos rasės ({count}):",
+  "command.releasedRace": "Atlaisvinta rasės {race} rezervacijų: {count}.",
+  "command.nobodyHolds": "Rasės {race} niekas neturi.",
+  "command.releasedPlayer": "Žaidėjo {name} rezervacija atlaisvinta.",
+  "command.noClaim": "Žaidėjas {name} neturi rezervacijos.",
+  "command.reloaded": "Unique Races konfigūracija įkelta iš naujo."
+}

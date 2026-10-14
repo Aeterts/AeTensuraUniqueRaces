@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cРаса &e{race}&c уже занята: &f{holders}&c. Выберите другую.",
+  "message.full": "&cРаса &e{race}&c заполнена (&f{holders}&c). Выберите другую.",
+  "message.someone": "другой игрок",
+  "message.noFreeRace": "&cВсе расы из этого списка уже заняты.",
+  "message.noneTaken": "&7Пока ни одна раса не занята.",
+  "message.showHeader": "&6Занятые расы ({count}):",
+  "command.releasedRace": "Снято занятий расы {race}: {count}.",
+  "command.nobodyHolds": "Расу {race} никто не занимает.",
+  "command.releasedPlayer": "Занятие игрока {name} снято.",
+  "command.noClaim": "У игрока {name} нет занятия.",
+  "command.reloaded": "Конфиг Unique Races перезагружен."
+}

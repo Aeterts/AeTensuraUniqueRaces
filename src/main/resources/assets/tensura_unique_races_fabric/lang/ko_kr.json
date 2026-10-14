@@ -1,0 +1,13 @@
+{
+  "message.taken": "&c종족 &e{race}&c은(는) 이미 사용 중입니다: &f{holders}&c. 다른 종족을 선택하세요.",
+  "message.full": "&c종족 &e{race}&c은(는) 가득 찼습니다 (&f{holders}&c). 다른 종족을 선택하세요.",
+  "message.someone": "다른 플레이어",
+  "message.noFreeRace": "&c이 목록의 모든 종족이 이미 사용 중입니다.",
+  "message.noneTaken": "&7아직 사용 중인 종족이 없습니다.",
+  "message.showHeader": "&6사용 중인 종족 ({count}):",
+  "command.releasedRace": "종족 {race}의 점유 {count}건을 해제했습니다.",
+  "command.nobodyHolds": "종족 {race}을(를) 가진 사람이 없습니다.",
+  "command.releasedPlayer": "{name}의 점유를 해제했습니다.",
+  "command.noClaim": "{name}에게는 점유가 없습니다.",
+  "command.reloaded": "Unique Races 설정을 다시 불러왔습니다."
+}

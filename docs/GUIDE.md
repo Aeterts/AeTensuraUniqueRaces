@@ -112,10 +112,18 @@ choice is refused with the `messages.noFreeRace` text.
 **Evolution.** An ordinary evolution into a race another player holds (when the limit is reached) simply does not happen,
 and the player sees the same message as for a refused choice.
 
-The texts can be changed (`messages.*`). They are sent as plain text, not as translation keys (the mod is server-side
-only and needs no language files on the clients), so write them in the language your players use.
+The mod comes with texts in **33 languages** (English, Russian, Ukrainian, German, French, Spanish, Brazilian Portuguese, Italian, Polish, Turkish, Simplified and Traditional Chinese, Japanese, Korean, Dutch, Czech, Slovak, Swedish, Danish, Finnish, Norwegian, Hungarian, Romanian, Greek, Bulgarian, Croatian, Lithuanian, Latvian, Estonian, Thai, Vietnamese, Indonesian and Catalan). Because it is server-side only, the server picks the
+language: a player gets the language of their game, and a language the mod does not have (or a console) gets English. A
+regional variant uses the file of its language (Austrian German gets German, Mexican Spanish gets Spanish). The `language`
+setting can force one language for everybody. The texts can also be changed (`messages.*`); a text you changed is sent as you
+wrote it, in every language.
 
-The default message looks like this: `The race Elf is already taken by Steve. Choose another one.`
+Apart from English and Russian, the translations were produced with machine assistance and have not been reviewed by native
+speakers; corrections are welcome (see [Translations](../README.md#translations) in the README).
+
+The default message looks like this:
+- English: `The race Elf is already taken by Steve. Choose another one.`
+- German: the same message, translated (`lang/de_de.json`), and so on.
 
 ---
 

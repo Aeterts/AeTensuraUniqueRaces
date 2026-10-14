@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/** Evolution trees, read from the live race registry (so races added by other add-ons are covered too). */
 public final class RaceGraph {
     private static final Map<ResourceLocation, Set<ResourceLocation>> CLOSURES = new HashMap<>();
 
@@ -40,7 +39,6 @@ public final class RaceGraph {
         return ids;
     }
 
-    /** Base forms that a player can pick in the reincarnation menu, in any of Tensura's pools. */
     public static Set<ResourceLocation> baseRaces() {
         Set<ResourceLocation> bases = new java.util.HashSet<>();
         ReincarnationConfig.Races c = ConfigRegistry.getConfig(ReincarnationConfig.class).Races;

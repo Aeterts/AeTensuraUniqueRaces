@@ -63,7 +63,7 @@ public abstract class ReincarnationMenuMixin {
                 denial = Claims.check(sp, raceId);
             }
         } else if (getRandomRacePool().isEmpty()) {
-            denial = org.aeterts.tensuraunique.UniqueConfig.format(TensuraUniqueRaces.config().messages.noFreeRace, java.util.Map.of());
+            denial = org.aeterts.tensuraunique.UniqueConfig.format(TensuraUniqueRaces.config().message("noFreeRace", org.aeterts.tensuraunique.Lang.of(sp)), java.util.Map.of());
         }
         if (denial != null) {
             sp.sendSystemMessage(denial);

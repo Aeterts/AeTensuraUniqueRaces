@@ -1,0 +1,13 @@
+{
+  "message.taken": "&c种族&e{race}&c已被&f{holders}&c占用。请选择其他种族。",
+  "message.full": "&c种族&e{race}&c已满（&f{holders}&c）。请选择其他种族。",
+  "message.someone": "其他玩家",
+  "message.noFreeRace": "&c此列表中的所有种族都已被占用。",
+  "message.noneTaken": "&7目前还没有被占用的种族。",
+  "message.showHeader": "&6已被占用的种族（{count}）：",
+  "command.releasedRace": "已释放种族 {race} 的 {count} 条占用记录。",
+  "command.nobodyHolds": "没有人占用种族 {race}。",
+  "command.releasedPlayer": "已释放玩家 {name} 的占用记录。",
+  "command.noClaim": "玩家 {name} 没有占用记录。",
+  "command.reloaded": "Unique Races 配置已重新加载。"
+}

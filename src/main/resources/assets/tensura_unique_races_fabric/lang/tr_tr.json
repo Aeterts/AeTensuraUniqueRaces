@@ -1,0 +1,13 @@
+{
+  "message.taken": "&e{race}&c ırkı zaten alınmış: &f{holders}&c. Başka bir ırk seçin.",
+  "message.full": "&e{race}&c ırkı dolu (&f{holders}&c). Başka bir ırk seçin.",
+  "message.someone": "başka bir oyuncu",
+  "message.noFreeRace": "&cBu listedeki tüm ırklar zaten alınmış.",
+  "message.noneTaken": "&7Henüz hiçbir ırk alınmadı.",
+  "message.showHeader": "&6Alınmış ırklar ({count}):",
+  "command.releasedRace": "{race} ırkının {count} kaydı serbest bırakıldı.",
+  "command.nobodyHolds": "{race} ırkına kimse sahip değil.",
+  "command.releasedPlayer": "{name} oyuncusunun kaydı serbest bırakıldı.",
+  "command.noClaim": "{name} oyuncusunun kaydı yok.",
+  "command.reloaded": "Unique Races yapılandırması yeniden yüklendi."
+}

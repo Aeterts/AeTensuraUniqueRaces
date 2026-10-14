@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasa &e{race}&c je već zauzeta: &f{holders}&c. Odaberi drugu.",
+  "message.full": "&cRasa &e{race}&c je puna (&f{holders}&c). Odaberi drugu.",
+  "message.someone": "drugi igrač",
+  "message.noFreeRace": "&cSve rase s ovog popisa već su zauzete.",
+  "message.noneTaken": "&7Nijedna rasa još nije zauzeta.",
+  "message.showHeader": "&6Zauzete rase ({count}):",
+  "command.releasedRace": "Oslobođeno rezervacija rase {race}: {count}.",
+  "command.nobodyHolds": "Nitko nema rasu {race}.",
+  "command.releasedPlayer": "Rezervacija igrača {name} je oslobođena.",
+  "command.noClaim": "Igrač {name} nema rezervaciju.",
+  "command.reloaded": "Konfiguracija Unique Races ponovno je učitana."
+}

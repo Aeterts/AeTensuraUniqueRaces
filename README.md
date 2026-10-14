@@ -27,6 +27,7 @@ survive restarts, offline players keep their race, and clients do not need the m
 - **Persistent.** Claims live in the world data and survive restarts; offline players keep their race.
 - **Administrator tools.** `/tensura unique show|release|reload`, players that are never limited, automatic release of
   inactive players, refusals written to the log.
+- **33 languages**, chosen by each player's game language (a regional variant uses the file of its language). Another language is a single file.
 - **Fully configurable**, including the texts of every message. Changes apply with `/tensura unique reload`.
 - **Works with other Tensura add-ons.** Races added by add-ons are picked up from the registry without any setup.
 
@@ -101,9 +102,10 @@ Race ids are written like `tensura:goblin`. The most useful settings:
 | `inactiveReleaseDays` | `0` | release the claims of players away for this many days, `0` = never |
 | `checkReincarnationMenu`, `checkEvolutions` | `true` | what is refused |
 | `showHolderNames` | `true` | show who holds a race in `show` and in refusals |
+| `language` | `auto` | language of the built-in texts: each player's game language, or a fixed one (`en_us`, `ru_ru`, `de_de`, ...) |
 | `messages.*` | see file | every text, with `&` colour codes and `{race}` `{holders}` `{limit}` placeholders |
 
-Every setting, the exact rules for deciding whether a race is taken and sixteen ready-made recipes are in the
+Every setting, the exact rules for deciding whether a race is taken and seventeen ready-made recipes are in the
 [configuration reference](docs/CONFIG.md).
 
 ## Project layout
@@ -116,6 +118,8 @@ src/main/java/org/aeterts/tensuraunique/
   RaceGraph.java              evolution trees, read from the ManasCore race registry
   UniqueConfig.java           the config model, loading and message formatting
   UniqueCommand.java          /tensura unique ...
+  Lang.java                   picks the language of a message (player's game language or the config)
+  (resources) assets/.../lang/<code>.json and languages.json   the texts per language and the list of languages
   mixin/ReincarnationMenuMixin.java   refuses taken races in Tensura's reincarnation menu
   DevTest.java                development-only self-test (not part of the released jar)
 art/                          the Blockbench model and renders of the icon
@@ -162,6 +166,17 @@ request.
 ### Status
 
 Checked on a dedicated server with two players (refusal message, menu opens again, `show`) and by the self-test above.
+
+## Translations
+
+The texts are in `src/main/resources/assets/tensura_unique_races_fabric/lang/`. English and Russian are the source languages; the
+others were produced with machine assistance and have not been reviewed by native speakers, so corrections are very welcome
+(a pull request that edits one file is enough).
+
+To add a language, copy `en_us.json` to `<code>.json` (the code is the Minecraft language code, for example `ar_sa`),
+translate the values and keep the `{placeholders}` and the `&` colour codes, then add the code to `languages.json`
+(`aliases` maps regional variants, for example `zh_hk` to `zh_tw`). `/tensura unique devtest` checks that every listed language
+has every key and the same placeholders as English.
 
 ## Contributing
 

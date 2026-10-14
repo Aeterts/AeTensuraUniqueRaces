@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cเผ่า &e{race}&c ถูกจองแล้วโดย &f{holders}&c กรุณาเลือกเผ่าอื่น",
+  "message.full": "&cเผ่า &e{race}&c เต็มแล้ว (&f{holders}&c) กรุณาเลือกเผ่าอื่น",
+  "message.someone": "ผู้เล่นคนอื่น",
+  "message.noFreeRace": "&cเผ่าทั้งหมดในรายการนี้ถูกจองแล้ว",
+  "message.noneTaken": "&7ยังไม่มีเผ่าที่ถูกจอง",
+  "message.showHeader": "&6เผ่าที่ถูกจอง ({count}):",
+  "command.releasedRace": "ปล่อยการจองเผ่า {race} จำนวน {count} รายการ",
+  "command.nobodyHolds": "ไม่มีใครครองเผ่า {race}",
+  "command.releasedPlayer": "ปล่อยการจองของ {name} แล้ว",
+  "command.noClaim": "{name} ไม่มีการจอง",
+  "command.reloaded": "โหลดการตั้งค่า Unique Races ใหม่แล้ว"
+}

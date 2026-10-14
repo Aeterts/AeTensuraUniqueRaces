@@ -17,13 +17,6 @@ import java.util.TreeMap;
 import static net.minecraft.commands.Commands.argument;
 import static net.minecraft.commands.Commands.literal;
 
-/**
- * {@code /tensura unique ...}. The {@code tensura} root is shared with Tensura's own commands: Brigadier merges nodes of the same name.
- * <ul>
- *   <li>{@code show} - everyone: taken races and who holds them</li>
- *   <li>{@code release race <id>}, {@code release player <name>}, {@code reload} - operators (level 2)</li>
- * </ul>
- */
 public final class UniqueCommand {
     private UniqueCommand() {
     }
@@ -62,15 +55,15 @@ public final class UniqueCommand {
         UniqueConfig cfg = Claims.cfg();
         ClaimState state = ClaimState.get(src.getServer());
         if (state.claims.isEmpty()) {
-            src.sendSuccess(() -> UniqueConfig.format(cfg.messages.noneTaken, Map.of()), false);
+            src.sendSuccess(() -> UniqueConfig.format(cfg.message("noneTaken", Lang.of(src.getPlayer())), Map.of()), false);
             return 0;
         }
-        // race -> holders
         Map<ResourceLocation, List<String>> byRace = new TreeMap<>();
         for (ClaimState.Claim c : state.claims.values()) {
             byRace.computeIfAbsent(c.current, k -> new ArrayList<>()).add(c.name == null || c.name.isEmpty() ? "?" : c.name);
         }
-        src.sendSuccess(() -> UniqueConfig.format(cfg.messages.showHeader, Map.of("count", Component.literal(String.valueOf(byRace.size())))), false);
+        src.sendSuccess(() -> UniqueConfig.format(cfg.message("showHeader", Lang.of(src.getPlayer())),
+                Map.of("count", Component.literal(String.valueOf(byRace.size())))), false);
         for (Map.Entry<ResourceLocation, List<String>> e : byRace.entrySet()) {
             int limit = cfg.limitFor(e.getKey());
             String who = cfg.showHolderNames ? String.join(", ", e.getValue()) : String.valueOf(e.getValue().size());
@@ -85,21 +78,24 @@ public final class UniqueCommand {
 
     private static int releaseRace(CommandSourceStack src, ResourceLocation race) {
         int n = Claims.releaseRace(src.getServer(), race);
-        src.sendSuccess(() -> Component.literal(n == 0 ? "Nobody holds " + race + "." : "Released " + n + " claim(s) of " + race + ".")
-                .withStyle(n == 0 ? ChatFormatting.GRAY : ChatFormatting.GREEN), true);
+        String lang = Lang.of(src.getPlayer());
+        String text = n == 0 ? Lang.format(lang, "command.nobodyHolds", Map.of("race", race.toString()))
+                : Lang.format(lang, "command.releasedRace", Map.of("count", String.valueOf(n), "race", race.toString()));
+        src.sendSuccess(() -> Component.literal(text).withStyle(n == 0 ? ChatFormatting.GRAY : ChatFormatting.GREEN), true);
         return n;
     }
 
     private static int releasePlayer(CommandSourceStack src, String name) {
         boolean ok = Claims.releasePlayer(src.getServer(), name);
-        src.sendSuccess(() -> Component.literal(ok ? "Released the claim of " + name + "." : name + " holds no claim.")
-                .withStyle(ok ? ChatFormatting.GREEN : ChatFormatting.GRAY), true);
+        String text = Lang.format(Lang.of(src.getPlayer()), ok ? "command.releasedPlayer" : "command.noClaim", Map.of("name", name));
+        src.sendSuccess(() -> Component.literal(text).withStyle(ok ? ChatFormatting.GREEN : ChatFormatting.GRAY), true);
         return ok ? 1 : 0;
     }
 
     private static int reload(CommandSourceStack src) {
         TensuraUniqueRaces.reloadConfig();
-        src.sendSuccess(() -> Component.literal("Unique Races config reloaded.").withStyle(ChatFormatting.GREEN), true);
+        String text = Lang.get(Lang.of(src.getPlayer()), "command.reloaded");
+        src.sendSuccess(() -> Component.literal(text).withStyle(ChatFormatting.GREEN), true);
         return 1;
     }
 }

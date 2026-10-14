@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cRasa &e{race}&c este deja ocupată de &f{holders}&c. Alege alta.",
+  "message.full": "&cRasa &e{race}&c este plină (&f{holders}&c). Alege alta.",
+  "message.someone": "alt jucător",
+  "message.noFreeRace": "&cToate rasele din această listă sunt deja ocupate.",
+  "message.noneTaken": "&7Nicio rasă nu este ocupată încă.",
+  "message.showHeader": "&6Rase ocupate ({count}):",
+  "command.releasedRace": "{count} rezervare/rezervări ale rasei {race} eliberate.",
+  "command.nobodyHolds": "Nimeni nu are rasa {race}.",
+  "command.releasedPlayer": "Rezervarea lui {name} a fost eliberată.",
+  "command.noClaim": "{name} nu are nicio rezervare.",
+  "command.reloaded": "Configurația Unique Races a fost reîncărcată."
+}

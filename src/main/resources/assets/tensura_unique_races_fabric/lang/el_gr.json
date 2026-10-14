@@ -1,0 +1,13 @@
+{
+  "message.taken": "&cΗ φυλή &e{race}&c είναι ήδη κατειλημμένη: &f{holders}&c. Διάλεξε άλλη.",
+  "message.full": "&cΗ φυλή &e{race}&c είναι πλήρης (&f{holders}&c). Διάλεξε άλλη.",
+  "message.someone": "άλλος παίκτης",
+  "message.noFreeRace": "&cΌλες οι φυλές αυτής της λίστας είναι ήδη κατειλημμένες.",
+  "message.noneTaken": "&7Καμία φυλή δεν είναι ακόμα κατειλημμένη.",
+  "message.showHeader": "&6Κατειλημμένες φυλές ({count}):",
+  "command.releasedRace": "Αποδεσμεύτηκαν {count} κρατήσεις της φυλής {race}.",
+  "command.nobodyHolds": "Κανείς δεν έχει τη φυλή {race}.",
+  "command.releasedPlayer": "Η κράτηση του {name} αποδεσμεύτηκε.",
+  "command.noClaim": "Ο {name} δεν έχει κράτηση.",
+  "command.reloaded": "Οι ρυθμίσεις του Unique Races φορτώθηκαν ξανά."
+}
