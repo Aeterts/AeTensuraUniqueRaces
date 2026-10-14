@@ -13,7 +13,7 @@ survive restarts, offline players keep their race, and clients do not need the m
 
 > Not affiliated with the Tensura: Reincarnated team.
 
-**Documentation:** [guide](docs/GUIDE.md) · [configuration reference with recipes](docs/CONFIG.md) · [changelog](CHANGELOG.md)
+**Download:** [Modrinth](https://modrinth.com/project/tensura-unique-races) · **Documentation:** [guide](docs/GUIDE.md) · [configuration reference with recipes](docs/CONFIG.md) · [changelog](CHANGELOG.md)
 
 ## Features
 
