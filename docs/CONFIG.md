@@ -100,7 +100,7 @@ registry, including races from other add-ons.
 | Setting | Type | Default | Description |
 |---|---|---|---|
 | `maxPlayersPerRace` | number | `1` | How many players may have the same race at once. `0` or less means unlimited. |
-| `perRaceLimits` | object | `{}` | Limits of single races, they override `maxPlayersPerRace`: `{"tensura:slime": 2, "tensura:orc": 0}` (slime is limited to 2, orc is unlimited). A value of `0` or less means unlimited. |
+| `perRaceLimits` | object | `{}` | Limits of single races, they override `"maxPlayersPerRace"`: `{"tensura:slime": 2, "tensura:orc": 0}` (slime is limited to 2, orc is unlimited). A value of `0` or less means unlimited. |
 | `strictlyUniqueRaces` | list | `[]` | Races that only one player can hold, whatever the other limits say. Highest priority. |
 | `exemptRaces` | list | the human line | Races anyone can take; they create no claims and have no limit. |
 | `exemptIncludesEvolutions` | true/false | `false` | When `true`, not only the races in `exemptRaces` but **their whole evolution tree** is free. Be careful: Human evolves into Vampire, so with this setting vampires become free as well. |
